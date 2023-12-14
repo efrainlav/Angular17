@@ -12,14 +12,22 @@ export class LabsComponent {
   title = 'todoapp';
   tasks = ['Instalar el Angular CLI', 'Crear proyecto', 'Crear componentes'];
   name = 'Efrain';
-  edad = 40;
+  age = 40;
   disabled = false;
   img = 'https://w3schools.com/howto/img_avatar.png';
 
   person = {
     name: 'Efrain',
-    edad: 40,
+    age: 40,
     disabled: false,
     avatar: 'https://w3schools.com/howto/img_avatar.png',
   };
+
+  clickHandker() {
+    alert('Hola');
+  }
+
+  changeHandler(event: Event) {
+    console.log(event);
+  }
 }

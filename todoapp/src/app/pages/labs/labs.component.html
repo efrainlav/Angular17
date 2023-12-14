@@ -1,18 +1,26 @@
-<h1>My new app</h1>
-<h2>This is a ngFor test</h2>
+<div class="container">
+  <h1>My new app</h1>
+  <h2>This is a ngFor test</h2>
 
-<ul>
-  <!-- sintaxis antigua -->
-  <li *ngFor="let task of tasks">
-    {{ task }}
-  </li>
-</ul>
-<hr />
-<h2>{{ "Hola_".repeat(4) }}</h2>
-<p>La suma de 3 +3 es {{ 3 + 3 }}</p>
-<p>Hola soy {{ name }} y mi edad es {{ edad }}</p>
-<hr />
-<img [src]="img" alt="" />
-<input type="text" [value]="name" />
-<button [disabled]="disabled">Click Me!!</button>
-<p>person: {{ person.name }}</p>
+  <ul>
+    <!-- sintaxis antigua -->
+    <li *ngFor="let task of tasks">
+      {{ task }}
+    </li>
+  </ul>
+  <hr />
+  <h2>{{ "Hola_".repeat(4) }}</h2>
+  <p>La suma de 3 +3 es {{ 3 + 3 }}</p>
+  <p>Hola soy {{ name }} y mi edad es {{ age }}</p>
+  <hr />
+  <img [src]="person.avatar" alt="" />
+  <input type="number" [value]="person.age" />
+  <button [disabled]="disabled">Click Me!!</button>
+  <p>person: {{ person.name }}</p>
+  <button (click)="clickHandker()">Click ME!!</button>
+  <hr />
+  <button (dblclick)="clickHandker()">CDoubleme!!</button>
+  <hr />
+  <p>(change)</p>
+  <input type="number" [value]="person.age" (change)="changeHandler($event)" />
+</div>
