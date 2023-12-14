@@ -23,4 +23,13 @@
   <hr />
   <p>(change)</p>
   <input type="number" [value]="person.age" (change)="changeHandler($event)" />
+  <p>(change)</p>
+  <input type="text" [value]="person.name" (change)="changeHandler($event)" />
+  <p>(keywond)</p>
+  <input type="text" [value]="person.name" (keydown)="keydownHandler($event)" />
+  <p>(Atajo teclado shift + t)</p>
+  <input type="text" [value]="person.name" (keydown.shift.t)="clickHandker()" />
+  <p>(Telado en timepo real)</p>
+  <input type="text" (keyup)="changeTextKeyboard($event)" />
+  <p>I'm the input content => {{ valueInput }}</p>
 </div>
